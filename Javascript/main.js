@@ -4,7 +4,8 @@ require.config({
 		        "jquery"     : "libs/jquery",
 		        "backbone"   : "libs/backbone",
 		        "underscore" : "libs/underscore",
-		        "bootstrap"  : "libs/bootstrap"
+		        "bootstrap"  : "libs/bootstrap",
+		        "pubSub"	 : "libs/pubSub"	
  		    },
 		    shim: {
 		        'backbone': {
@@ -29,7 +30,7 @@ require(
 	'views/header-view',
 	'views/footer-view',
 	'views/body-view',
-	'bootstrap' 
+	'bootstrap'
 	],
 	function(
 		BaseRouter,
