@@ -1,0 +1,32 @@
+/** Responsive CSS**/
+
+@media (max-width: 500px) {
+
+	.myResponsive p{
+		 margin-bottom: 20px;
+    	font-size: 10px ; 
+    	line-height: 1.4;
+	}
+
+	.myResponsive h1 {
+		font-size: 20px;
+	}
+
+
+}
+
+
+@media (min-width: 992px) {
+
+	.myResponsive p{
+		 margin-bottom: 40px;
+    	font-size: 30px; 
+    	line-height: 2;
+	}
+
+	.myResponsive h1 {
+		font-size: 40px;
+	}
+
+
+}
