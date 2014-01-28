@@ -2,7 +2,7 @@ define([
 		'backbone',
 		 'jquery',
 		 'underscore',
-		 'text!/Code/templates/header_template.html'
+		 'text!/templates/header_template.html'
 		 ], function(
 		 	Backbone,
 		 	$,
