@@ -17,6 +17,7 @@ define([
 				
 				initialize : function(){
 					this.render();
+					_.bindAll(this,"authorize")
 				},
 				events:{
                 	'click button#login':'validate',
@@ -24,15 +25,21 @@ define([
            		},
 
             	validate:function(){
-                	if($('#UserName').val()==null || $('#UserName').val()=="" )
-                	{
+                	if($('#UserName').val()==null || $('#UserName').val()=="" ) {
                 		alert("user name is empty");
-                	}
-                	else if($('#Password').val()==null || $('#Password').val()=="" )
-                	{
+                	}else if($('#Password').val()==null || $('#Password').val()=="" ) {
                 		alert("Password is empty");
+                	}else if(this.authorize()){
+                		//route will be changed here
+                		alert('route changed');
+                	}else {
+                		alert('user name or password is not valid')
                 	}
-
+           		},
+				
+				//user login validation called
+           		authorize:function(){
+           			return true;
            		},
 
            		resetField:function(){
