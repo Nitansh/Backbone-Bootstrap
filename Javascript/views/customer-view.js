@@ -18,7 +18,6 @@ define([
 				template : _.template(myTemplate),
 			
 				render: function(){
-					alert('called');
 					$(this.el).html(this.template());
 				}
 
