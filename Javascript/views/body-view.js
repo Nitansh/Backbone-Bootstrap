@@ -23,13 +23,12 @@ define([
                		'click button#reset':'resetField'
            		},
 
-            	validate:function(event){
+            	validate:function(){
                 	if($('#UserName').val()==null || $('#UserName').val()=="" )
                 	{
                 		alert("user name is empty");
-                		event.cancel();
                 	}
-                	if($('#Password').val()==null || $('#Password').val()=="" )
+                	else if($('#Password').val()==null || $('#Password').val()=="" )
                 	{
                 		alert("Password is empty");
                 	}
