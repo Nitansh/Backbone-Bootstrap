@@ -1,10 +1,12 @@
 define(
 	[
-		'backbone'
+		'backbone',
+		'libs/pubSub'
 	],
 	function
 	(
-		Backbone
+		Backbone,
+		PubSub
 	){
 
 	"use strict"; 
@@ -12,7 +14,11 @@ define(
 	var BaseRouter = Backbone.Router.extend({
 		
 		routes : {
-			''		      : "init",
+			''		      : "init"
+		},
+
+		init : function(){
+			PubSub.trigger('State:login','LoginState');
 		}		
 	});
 

@@ -26,37 +26,18 @@ require.config({
 
 require(
 	[
-	'router/baseRouter',
-	'views/header-view',
-	'views/footer-view',
-	'views/body-view',
+	'apps/BaseApp',
 	'bootstrap'
 	],
 	function(
-		BaseRouter,
-		HeaderView,
-		FooterView,
-		BodyView,
+		BaseApp,
 		Bootstrap
 		){		
 		"use strict";
 
 			
-		function application(){
-			var baseRouter =  new BaseRouter();
-
-			baseRouter.on('route:init', function(){
-				var headerView = new HeaderView();
-				var footerView = new FooterView();
-				var bodyView   = new BodyView(); 
-			});
-			
-			return baseRouter;
-		}
-
-		var app  = new application();
-	
-		Backbone.history.start({'root' : 'Code'});
+		var baseApp = new BaseApp();	
+		Backbone.history.start();
 		
-		return app;
+		return baseApp;
 });
