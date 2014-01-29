@@ -14,12 +14,13 @@ define([
 		){
 	
 			function BaseApp (){
-				PubSub.on('State:login', this.StateLogin);
-				var baseRouter =  new BaseRouter();
+				var self  =  this;
+				this.baseRouter =  new BaseRouter();
+				PubSub.listenTo(self.baseRouter, 'route:init', self.StateLogin);
+				
 			};
 
-			BaseApp.prototype.StateLogin =  function(msg){
-				alert(msg);
+			BaseApp.prototype.StateLogin =  function(msg){		
 				var headerView = new HeaderView();
 				var footerView = new FooterView();
 				var bodyView   = new BodyView(); 

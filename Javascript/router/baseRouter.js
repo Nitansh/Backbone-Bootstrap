@@ -15,10 +15,6 @@ define(
 		
 		routes : {
 			''		      : "init"
-		},
-
-		init : function(){
-			PubSub.trigger('State:login','LoginState');
 		}		
 	});
 
