@@ -13,9 +13,20 @@ define(
 
 	var BaseRouter = Backbone.Router.extend({
 		
+		initialize : function() {
+			_.bindAll(this,"routeChange");
+			PubSub.on('userAuthorized', this.routeChange);
+		},
+
 		routes : {
-			''		      : "init"
-		}		
+			''		      : "init",
+			'login'       : "userLoggedIn"
+		},
+
+		routeChange : function(){
+			this.navigate("login", {trigger: true});
+		}
+
 	});
 
 	return BaseRouter;

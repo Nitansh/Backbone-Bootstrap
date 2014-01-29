@@ -2,12 +2,14 @@ define([
 		'backbone',
 		 'jquery',
 		 'underscore',
-		 'text!/templates/body_template.html'
+		 'text!/templates/body_template.html',
+		 'libs/pubSub'
 		 ], function(
 		 	Backbone,
 		 	$,
 		 	_,
-		 	myTemplate
+		 	myTemplate,
+		 	PubSub
 		 	){
 
 			var BodyView = Backbone.View.extend({
@@ -17,7 +19,7 @@ define([
 				
 				initialize : function(){
 					this.render();
-					_.bindAll(this,"authorize")
+					_.bindAll(this,"navigateToLogin")
 				},
 				events:{
                 	'click button#login':'validate',
@@ -29,18 +31,18 @@ define([
                 		alert("user name is empty");
                 	}else if($('#Password').val()==null || $('#Password').val()=="" ) {
                 		alert("Password is empty");
-                	}else if(this.authorize()){
+                	}else if(this.navigateToLogin()){
                 		//route will be changed here
-                		alert('route changed');
+                		PubSub.trigger("userAuthorized","UserAuthorized");
                 	}else {
                 		alert('user name or password is not valid')
                 	}
            		},
 				
 				//user login validation called
-           		authorize:function(){
-           			return true;
-           		},
+    			navigateToLogin: function(){
+        			return true; 
+    			},
 
            		resetField:function(){
            			$('#UserName').val(null);
