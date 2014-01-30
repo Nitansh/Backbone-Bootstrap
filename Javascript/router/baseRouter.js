@@ -20,11 +20,11 @@ define(
 
 		routes : {
 			''		      : "init",
-			'login'       : "userLoggedIn"
+			'ratingPlan'  : "userLoggedIn"
 		},
 
 		routeChange : function(){
-			this.navigate("login", {trigger: true});
+			this.navigate("ratingPlan", {trigger: true});
 		}
 
 	});

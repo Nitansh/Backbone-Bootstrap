@@ -20,6 +20,10 @@ define(function(
 			BaseApp.prototype.UserAuthorized= function(){
 				var CustomerView = require('views/customer-view');	
                 var customerView = new CustomerView();
+                var HeaderUserAuthorized = require('views/header-view-userAuthorized');
+                var headerUserAuthorized =  new HeaderUserAuthorized();
+                var UserAuthorizedApp = require('apps/UserAuthorizedApp');
+                var userAuthorizedApp = new UserAuthorizedApp();
 			};
 
 			BaseApp.prototype.StateLogin =  function(msg){
