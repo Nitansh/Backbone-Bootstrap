@@ -13,7 +13,6 @@ define(function(
 		}
 
 		userAuthorizedApp.prototype.stateGeneralInfo =  function(){
-			alert('Hello world');
 			var GeneralInformationView = require('views/generalInformation-view');	
             var generalInformationView = new GeneralInformationView();
 		}

@@ -7,6 +7,13 @@
     	font-size: 15px ; 
     	line-height: 1.4;
 	}
+	.myResponsive strong p{
+		margin-bottom: 5px;
+    	font-size: 15px ; 
+    	line-height: 1.4;
+    	margin-top:30px;
+	}
+
 
 	.myResponsive h1 {
 		font-size: 25px;
