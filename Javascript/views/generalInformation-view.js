@@ -27,7 +27,6 @@ define([
 				template : _.template(myTemplate),
 			
 				render: function(){
-					alert(this.Collection);
 					$(this.el).html(this.template());
 				},
 
