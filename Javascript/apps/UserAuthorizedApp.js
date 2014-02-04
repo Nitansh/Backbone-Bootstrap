@@ -13,6 +13,10 @@ define(function(
 		}
 
 		userAuthorizedApp.prototype.stateGeneralInfo =  function(){
+			var PubSub     = require('libs/pubSub');
+			PubSub.trigger('remove:bodyView','old body view deleted');  
+			PubSub.trigger('remove:customerView','old customer information view deleted'); 
+
 			var GeneralInformationView = require('views/generalInformation-view');	
             var generalInformationView = new GeneralInformationView();
 		}

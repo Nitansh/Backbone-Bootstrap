@@ -19,7 +19,8 @@ define([
 				
 				initialize : function(){
 					this.render();
-					_.bindAll(this,"navigateToLogin")
+					_.bindAll(this,"navigateToLogin","remove");
+					PubSub.on('remove:bodyView',this.remove);
 				},
 				events:{
                 	'click button#login':'validate',
@@ -50,6 +51,14 @@ define([
            		},
 				render: function(){
 					$(this.el).html(this.template());
+				},
+
+				remove: function() {
+   					this.$el.empty();
+    				this.undelegateEvents();
+    				this.stopListening();
+    				PubSub.off('remove:bodyView');
+    				return this;
 				}
 
 			});

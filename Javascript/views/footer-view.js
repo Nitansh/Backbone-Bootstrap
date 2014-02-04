@@ -2,12 +2,14 @@ define([
 		'backbone',
 		 'jquery',
 		 'underscore',
-		 'text!/templates/footer_template.html'
+		 'text!/templates/footer_template.html',
+		 'libs/pubSub'
 		 ], function(
 		 	Backbone,
 		 	$,
 		 	_,
-		 	myTemplate
+		 	myTemplate,
+		 	PubSub
 		 	){
 
 			var FooterView = Backbone.View.extend({
@@ -20,7 +22,8 @@ define([
 				
 				render: function(){
 					$(this.el).html(this.template());
-				}	
+				}
+				
 			});
 			return FooterView;
 });
