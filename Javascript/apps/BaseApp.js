@@ -12,8 +12,6 @@ define(function(
 				this.baseRouter =  new BaseRouter();
 				PubSub.listenTo(self.baseRouter, 'route:init', self.StateLogin);
 				PubSub.listenTo(self.baseRouter, 'route:userLoggedIn', self.UserAuthorized);	
-
-				
 							
 			};
 

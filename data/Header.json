@@ -1,0 +1,17 @@
+{
+	"Company"  : "NewRoz",
+
+		
+	"Tab_Details" : [
+		{
+		"Tab_name" : "Rating Plan",
+		"Tab_link" : "/#/ratingPlan",
+		"Class"	   : "active"
+		},
+		{
+		"Tab_name" : "General Information",
+		"Tab_link" : "/#/generalInformation",
+		"Class"	   : ""
+		}
+	]
+}

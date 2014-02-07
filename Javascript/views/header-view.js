@@ -21,7 +21,6 @@ define([
 					this.render();
 					_.bindAll(this,"remove");
 					PubSub.on('remove:headerView',this.remove);
-
 				},
 
 				render: function(){
