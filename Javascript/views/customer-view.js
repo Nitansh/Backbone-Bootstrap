@@ -3,26 +3,43 @@ define([
 		 'jquery',
 		 'underscore',
 		 'text!/templates/customer_template.html',
-		 'libs/pubSub'
+		 'libs/pubSub',
+		 "model/RatingPlanModel"
 		 ], function(
 		 	Backbone,
 		 	$,
 		 	_,
 		 	myTemplate,
-		 	PubSub
+		 	PubSub,
+		 	RatingPlanModel
 		 	){
 			var CustomerView = Backbone.View.extend({
 				el : '.Body',
 
-				initialize : function(){
-					this.render();
-					_.bindAll(this,"remove");
-					PubSub.on('remove:customerView',this.remove);
-				},
+				model : new RatingPlanModel,
+
 				template : _.template(myTemplate),
 			
+				initialize : function(){
+					_.bindAll(this,"remove","render","success","failure");
+					var _this = this;
+					this.model.fetch({success : _this.success, error : _this.failure});
+					PubSub.on('remove:customerView',this.remove);
+				},
+				
+				success : function(model, response, options){
+					this.render();
+					console.log('rating plan model fetched successfully');
+				},
+
+				failure : function(model, response, options){
+					console.log('error in fectching rating plan model');
+		
+				},	
 				render: function(){
-					$(this.el).html(this.template());
+					var _this = this ;
+					var _data = {data : _this.model.toJSON() };
+					$(this.el).html(this.template(_data));
 				},
 
 				remove: function() {

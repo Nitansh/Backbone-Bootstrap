@@ -50,7 +50,6 @@ define([
 				setActiveClass : function (event){
 					this.$('.tabs').removeClass('active');
 					this.$(event.target).parent().addClass('active');
-					//event.preventDefault();
 				},
 
 				remove: function() {

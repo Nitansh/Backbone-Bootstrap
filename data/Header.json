@@ -13,5 +13,18 @@
 		"Tab_link" : "/#/generalInformation",
 		"Class"	   : ""
 		}
+	],
+
+	"DropDown_Buttons" : [
+		{
+			"Button_Name" : "LogOut",
+			"Button_Link" : "/#"
+		},
+		{
+			"Button_Name" : "Referesh",
+			"Button_Link" : "/#/Referesh"
+		}
+
+
 	]
 }
