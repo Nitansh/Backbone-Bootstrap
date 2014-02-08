@@ -37,7 +37,7 @@ define([
 					console.log('model fetched succcesfully');
 				},
 
-				error : function(error, response, options){
+				error : function(model, response, options){
 					console.log('error occured in fetching the header model' + response.responseText);
 					alert(error);
 				},
@@ -53,7 +53,7 @@ define([
 				},
 
 				remove: function() {
-   					this.$el.empty();
+					this.$el.empty();
     				this.undelegateEvents();
     				this.stopListening();
     				PubSub.off('remove:bodyView');
