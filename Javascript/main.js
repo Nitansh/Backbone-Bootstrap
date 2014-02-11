@@ -5,8 +5,7 @@ require.config({
 		        "backbone"   : "libs/backbone",
 		        "underscore" : "libs/underscore",
 		        "bootstrap"  : "libs/bootstrap",
-		        "pubSub"	 : "libs/pubSub",
-		        "polyglot"   : "libs/polyglot"	
+		        "pubSub"	 : "libs/pubSub"	
  		    },
 		    shim: {
 		        'backbone': {
@@ -20,10 +19,6 @@ require.config({
 		     	{
 		     		deps: ['jquery'],
 		     		exports : 'Bootstrap'
-		     	},
-		     	'polyglot':
-		     	{
-		     		exports: 'Polyglot'
 		     	}
 		    }
 		});
@@ -32,31 +27,17 @@ require.config({
 require(
 	[
 	'apps/BaseApp',
-	'bootstrap',
-	'polyglot',
-	'jquery'
+	'bootstrap'
 	],
 	function(
 		BaseApp,
-		Bootstrap,
-		Polyglot,
-		$
+		Bootstrap
 		){		
 		"use strict";
 
-		var _locale="";
-		if(navigator.language==="en-US"){
-			_locale = 'en';
-		}
-		else if(navigator.language==="de"){
-			_locale= 'de';
-		}
-  			
-  		$.getJSON('/locales/' + _locale + '.json', function(data) {
-  			window.polyglot = new Polyglot({phrases: data});
-  		}).done(function(){
-  			var baseApp = new BaseApp();	
-			Backbone.history.start();
-			return baseApp;
-		});	
-  	});
+			
+		var baseApp = new BaseApp();	
+		Backbone.history.start();
+		
+		return baseApp;
+});
