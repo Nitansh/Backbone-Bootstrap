@@ -13,22 +13,23 @@ define([
 		 	){
 
 			var HeaderView = Backbone.View.extend({
-				el : '.Header',
+				el : '.myView',
+
+				tagName : 'div',
 
 				template : _.template(myTemplate),
 				
 				initialize : function(){
 					this.render();
 					_.bindAll(this,"remove");
-					PubSub.on('remove:headerView',this.remove);
+								PubSub.on('remove:headerView',this.remove);
 				},
 
 				render: function(){
-					$(this.el).html(this.template());
+					$(this.el).append(this.template());
 				},
 
 				remove: function() {
-   					this.$el.empty();
     				this.undelegateEvents();
     				this.stopListening();
     				PubSub.off('remove:bodyView');

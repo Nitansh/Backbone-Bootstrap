@@ -2,21 +2,23 @@ define([
 		'backbone',
 		 'jquery',
 		 'underscore',
-		 'text!/templates/customer_template.html',
+		 'text!/templates/CustomerInformation_template.html',
 		 'libs/pubSub',
-		 "model/RatingPlanModel"
+		 "model/CustomerInformationModel"
 		 ], function(
 		 	Backbone,
 		 	$,
 		 	_,
 		 	myTemplate,
 		 	PubSub,
-		 	RatingPlanModel
+		 	CustomerInformationModel
 		 	){
-			var CustomerView = Backbone.View.extend({
-				el : '.Body',
+			var CustomerInformationView = Backbone.View.extend({
+				el : '.myView',
 
-				model : new RatingPlanModel,
+				tagName : 'div',
+
+				model : new CustomerInformationModel,
 
 				template : _.template(myTemplate),
 			
@@ -39,11 +41,11 @@ define([
 				render: function(){
 					var _this = this ;
 					var _data = {data : _this.model.toJSON() };
-					$(this.el).html(this.template(_data));
+					$(this.el).append(this.template(_data));
+					return this;
 				},
 
 				remove: function() {
-   					this.$el.empty();
     				this.undelegateEvents();
     				this.stopListening();
     				PubSub.off('remove:bodyView');
@@ -52,5 +54,5 @@ define([
 
 
 			});
-			return CustomerView;
+			return CustomerInformationView;
 });

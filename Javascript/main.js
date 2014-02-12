@@ -15,7 +15,7 @@ require.config({
 		        'underscore': {
 		            exports: '_'
 		     	},
-		     	bootstrap:
+		     	'bootstrap':
 		     	{
 		     		deps: ['jquery'],
 		     		exports : 'Bootstrap'

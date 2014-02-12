@@ -16,32 +16,28 @@ define(function(
 			};
 
 			BaseApp.prototype.UserAuthorized= function(){
-				// deleting old view
 				var PubSub     = require('libs/pubSub');
-				PubSub.trigger('remove:bodyView','old body view deleted'); 
-				PubSub.trigger('remove:headerView','old header view deleted'); 
-				PubSub.trigger('remove:generalInformationView','old general information view deleted'); 
+				// Delete login page views 
 
-				var CustomerView = require('views/customer-view');	
-                var customerView = new CustomerView();
-                var HeaderUserAuthorized = require('views/header-view-userAuthorized');
-                var headerUserAuthorized =  new HeaderUserAuthorized();
-                var UserAuthorizedApp = require('apps/UserAuthorizedApp');
-                var userAuthorizedApp = new UserAuthorizedApp();
+				var CustomerInformation = require('views/CustomerInformation-view');
+				var customerInformation = new CustomerInformation();
+				
 			};
 
 			BaseApp.prototype.StateLogin =  function(msg){
 				var PubSub     = require('libs/pubSub');
-				PubSub.trigger('remove:customerView','customer body view deleted'); 
-				PubSub.trigger('remove:headerViewUserAuthorized','old header view deleted'); 
-				PubSub.trigger('remove:generalInformationView','old general information view deleted');
 
 				var HeaderView   = require('views/header-view'); 		
 				var headerView   = new HeaderView();
-				var FooterView   = require('views/footer-view')
-				var footerView   = new FooterView();
-				var BodyView     = require('views/body-view')
-				var bodyView     = new BodyView();
+
+				var BodyView  = require('views/body-view');
+				var bodyview =  new BodyView();
+
+				var FooterView = require('views/footer-view');
+				var footerView = new FooterView();
+
+			
+	
 
 			};
 
