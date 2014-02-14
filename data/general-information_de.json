@@ -1,0 +1,57 @@
+{
+       "CustomerProfile":{
+        	"category1":{
+        	"name": "Customer Information_de",
+        	"details":[
+	        	{"name": "FirstName", "value": "Sunil"},
+	        	{"name": "LastName", "value": "Kumar"},
+	        	{"name": "Mission", "value": "0612569356"}
+        	]
+        	},
+        	"category2":{
+        	"name": "Account Information_de",
+        	"details":[
+				{"name": "Identifier_de", "value": "F06425"},
+				{"name": "Card Number_de", "value": "6248243348"},
+				{"name": "Profile Prepaid_de", "value": "Prepaid_de"},
+				{"name": "Lifecycle Active_de", "value": "Active_de"},
+				{"name": "End Activity_de", "value": "14/08/2009"},
+				{"name": "End Inactivity_de", "value": "14/09/2009"},
+				{"name": "Main Balance_de", "value": "12euros"},
+				{"name": "Last Credit Update_de", "value": "20/06/2009"},
+				{"name": "Last Free Date_de", "value": "14/06/2009"},
+				{"name": "Last Reload Date_de", "value": "20/06/2009"},
+				{"name": "Last Reload amount_de", "value": "20euros"}
+			]},
+			"category3":{
+        	"name": "Profile Summary_de",
+			"subname": "Accounts_de",
+        	"details":[
+				{"name": "Id_de"},
+				{"name": "Card No._de"},
+				{"name": "Profile_de"},
+				{"name": "Life Cycle_de"},
+				{"name": "End Activity_de"},
+				{"name": "End Inactivity_de"},
+				{"name": "Balance_de"}
+			],
+			"details1":[
+				{"name": "f0425", "value":"12345","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1536"},
+				{"name": "f0425", "value":"12346","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1537"},
+				{"name": "f0425", "value":"12347","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1538"},
+				{"name": "f0425", "value":"12348","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1539"},
+				{"name": "f0425", "value":"12349","value1":"Prepaid_de","value2":"InActive_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1540"},
+				{"name": "f0425", "value":"12350","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1541"},
+				{"name": "f0425", "value":"12351","value1":"Postpaid_de","value2":"Active_de","value3":"25/07/2011","value4":"25/07/2012","value5":"1542"}
+			],
+			"name1": "Friends And Family List" , 
+			"value1": "Consult and Manage",
+			"name2": "State" , 
+			"value2": "Full",
+			"name3": "Types",
+			"value3": [{"name": "Business"}, {"name": "Family"}, {"name": "Tennis"}],
+			"name4": "Commerical Offer Default",
+			"value4": "Smile Minutes"
+			}
+    }
+}

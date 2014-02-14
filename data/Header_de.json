@@ -1,0 +1,30 @@
+{
+	"Company"  : "NewRoz_de",
+
+		
+	"Tab_Details" : [
+		{
+		"Tab_name" : "Rating Plan_de",
+		"Tab_link" : "/#/ratingPlan",
+		"Class"	   : "active"
+		},
+		{
+		"Tab_name" : "General Information_de",
+		"Tab_link" : "/#/generalInformation",
+		"Class"	   : ""
+		}
+	],
+
+	"DropDown_Buttons" : [
+		{
+			"Button_Name" : "LogOut_de",
+			"Button_Link" : "/#"
+		},
+		{
+			"Button_Name" : "Referesh_de",
+			"Button_Link" : "/#/Referesh"
+		}
+
+
+	]
+}
