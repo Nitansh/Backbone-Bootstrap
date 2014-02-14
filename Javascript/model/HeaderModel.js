@@ -9,7 +9,11 @@ define([
 	
 		HeaderModel = Backbone.Model.extend({
  		
- 		url : '/data/Header.json'
+		urlRoot : '/data/Header', 	
+
+ 		url : function(){
+ 			return this.urlRoot + window.locale + '.json';
+ 		}
 
 		});
 

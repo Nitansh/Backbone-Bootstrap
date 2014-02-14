@@ -9,7 +9,11 @@ define([
 	
 		RatingPlanModel = Backbone.Model.extend({
  		
- 		url : '/data/Rating_Plan.json'
+ 		urlRoot : '/data/Rating_Plan',
+
+ 		url : function(){
+ 			return this.urlRoot + window.locale + '.json';
+ 		}
 
 		});
 

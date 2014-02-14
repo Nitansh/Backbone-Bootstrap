@@ -17,7 +17,11 @@ define([
 
 		model : Customer,
 
-		url : "/data/general-information.json"
+		urlRoot : "/data/general-information",
+
+		url : function(){
+			return this.urlRoot + window.locale + '.json';
+		}
 
 
 		});

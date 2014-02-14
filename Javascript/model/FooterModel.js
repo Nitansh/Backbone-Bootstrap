@@ -9,7 +9,11 @@ define([
 	
 		FooterModel = Backbone.Model.extend({
  		
- 		url : '/data/Footer.json'
+		urlRoot : '/data/Footer', 
+
+ 		url : function(){
+ 			return this.urlRoot + window.locale + '.json';
+ 		}
 
 		});
 

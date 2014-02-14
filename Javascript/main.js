@@ -35,6 +35,15 @@ require(
 		){		
 		"use strict";
 
+		
+
+		window.locale="";
+		if(navigator.language==="en-US"){
+			window.locale = '_en';
+		}
+		else if(navigator.language==="de"){
+			window.locale= '_de';
+		}
 			
 		var baseApp = new BaseApp();	
 		Backbone.history.start();
