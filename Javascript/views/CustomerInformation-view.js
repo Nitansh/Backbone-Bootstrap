@@ -25,6 +25,7 @@ define([
 				initialize : function(){
 					_.bindAll(this,"remove","render","success","failure");
 					var _this = this;
+
 					this.model.fetch({success : _this.success, error : _this.failure});
 					PubSub.on('remove:customerView',this.remove);
 				},
@@ -41,7 +42,7 @@ define([
 				render: function(){
 					var _this = this ;
 					var _data = {data : _this.model.toJSON() };
-					$(this.el).append(this.template(_data));
+					$(this.el).html(this.template(_data));
 					return this;
 				},
 

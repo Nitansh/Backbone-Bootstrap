@@ -1,13 +1,15 @@
 .view1 {
-  padding-top: 165px;
-  padding-bottom: 40px;
+
   background-color: #eee;
+  padding-bottom: 0px;
 }
 
 .form-signin {
   max-width: 330px;
-  padding: 15px;
+  padding-top: -30px;
   margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 40px;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {

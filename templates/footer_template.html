@@ -1,5 +1,31 @@
- <nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse" role="navigation">
-  <div class="container">
-    <p class="text-muted"><%= data.key %></p>
-  </div>
-</nav>
+<style>
+.navbar-inverse {
+background-color : rgb(245, 245, 245);
+}
+
+.empty-footer-div {
+	margin-top:0px;
+	height: 5px;
+	margin-bottom: 5px;
+	background-color: black;
+} 
+
+</style>
+<div class="container">
+   <div class = " row empty-footer-div "></div>
+   <div class="navbar row" role="navigation">
+      <div class="navbar-header">
+         <ol class="breadcrumb">
+            <li><a href="#">Contact Shape</a></li>
+            <li><a href="#">Coverage</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+         </ol>
+      </div>
+      <div class="container pull-right">
+         <div>
+            Copyright © 2014 Comverse, Inc. All rights reserved.
+         </div>
+      </div>
+   </div>
+</div>

@@ -13,7 +13,7 @@ define([
 		 	){
 
 			var HeaderView = Backbone.View.extend({
-				el : '.myView',
+				el : '.headerView',
 
 				tagName : 'div',
 
@@ -26,7 +26,7 @@ define([
 				},
 
 				render: function(){
-					$(this.el).append(this.template());
+					$(this.el).html(this.template());
 				},
 
 				remove: function() {

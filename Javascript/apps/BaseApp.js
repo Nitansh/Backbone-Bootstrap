@@ -32,10 +32,10 @@ define(function(
 
 				var BodyView  = require('views/body-view');
 				var bodyview =  new BodyView();
+			
 
 				var FooterView = require('views/footer-view');
 				var footerView = new FooterView();
-
 			
 	
 

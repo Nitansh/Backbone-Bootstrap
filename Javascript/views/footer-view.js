@@ -16,7 +16,7 @@ define([
 		 	"use strict";
 
 			var FooterView = Backbone.View.extend({
-				el : '.myView',
+				el : '.footerView',
 
 				tagName : 'div',
 				
@@ -41,7 +41,7 @@ define([
 
 				render: function(){
 					var _data = {data : this.model.toJSON()};
-					$(this.el).append(this.template(_data));
+					$(this.el).html(this.template(_data));
 					return this;
 				}
 				
