@@ -1,30 +1,48 @@
 {
 	"Company"  : "NewRoz",
 
-		
+	"Lang_buttons" : [
+		{
+			"name" : "English"
+			},
+		{
+			"name" : "French"
+			}
+
+	], 
+
+	"username" : "csradmin20 csradmin20 Logout",
+
 	"Tab_Details" : [
 		{
-		"Tab_name" : "Rating Plan",
-		"Tab_link" : "/#/ratingPlan",
+		"Tab_name" : "Home",
+		"Tab_link" : "#/Home",
 		"Class"	   : "active"
 		},
 		{
-		"Tab_name" : "General Information",
-		"Tab_link" : "/#/generalInformation",
+		"Tab_name" : "Accounts",
+		"Tab_link" : "#/Accounts",
 		"Class"	   : ""
-		}
-	],
-
-	"DropDown_Buttons" : [
-		{
-			"Button_Name" : "LogOut",
-			"Button_Link" : "/#"
 		},
 		{
-			"Button_Name" : "Referesh",
-			"Button_Link" : "/#/Referesh"
+		"Tab_name" : "Bills and Payments",
+		"Tab_link" : "#/Bills_and_Payments",
+		"Class"	   : ""
+		},
+		{
+		"Tab_name" : "Customer Care",
+		"Tab_link" : "#/Customer_Care",
+		"Class"	   : ""
+		},
+		{
+		"Tab_name" : "Person Management",
+		"Tab_link" : "#/Person_Management",
+		"Class"	   : ""
+		},
+		{
+		"Tab_name" : "Delivery Addresses",
+		"Tab_link" : "#/Delivery_Addresses",
+		"Class"	   : ""
 		}
-
-
 	]
 }

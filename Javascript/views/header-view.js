@@ -3,12 +3,14 @@ define([
 		 'jquery',
 		 'underscore',
 		 'text!/templates/header_template.html',
+		 'model/HeaderModel',
 		 'libs/pubSub'
 		 ], function(
 		 	Backbone,
 		 	$,
 		 	_,
 		 	myTemplate,
+		 	HeaderModel,
 		 	PubSub
 		 	){
 
@@ -18,15 +20,30 @@ define([
 				tagName : 'div',
 
 				template : _.template(myTemplate),
+
+				model :  new HeaderModel,
 				
 				initialize : function(){
 					this.render();
-					_.bindAll(this,"remove");
-								PubSub.on('remove:headerView',this.remove);
+					_.bindAll(this,"remove","success", "error");
+					var _this = this;
+					this.model.fetch({success : _this.success , error: _this.error});
+					PubSub.on('remove:headerView',this.remove);
 				},
 
 				render: function(){
-					$(this.el).html(this.template());
+					var _this = this;
+					var _data = {data : _this.model.toJSON()} 
+					$(this.el).html(this.template(_data));
+				},
+
+				success : function(model, response, options){
+					console.log("data mdoel fetcehd for headerView");
+					this.render();
+				},
+
+				error : function (model, response, options){
+					console.log("error in fecthing model");
 				},
 
 				remove: function() {

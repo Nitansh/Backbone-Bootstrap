@@ -23,27 +23,26 @@ background-color : rgb(245, 245, 245);
 <div class= "container header">
    <div class="row well well-sm">
       <div class = "col-md-1">
-         movstar
+         <%=data.Company%>
       </div>
       <div class="btn-group col-md-8 col-md-offset-3">
          <div class="row">
             <div class="col-md-3 col-md-offset-4">
-               <button type="button" class="btn btn-default">English</button>
-               <button type="button" class="btn btn-default">French</button>
+               <%_.each(data.Lang_buttons, function(data){%>
+               <button type="button" class="btn btn-default"><%=data.name%></button>
+               <%});%>
             </div>
-            <div class="col-md-4"><a classhref="#">csradmin20 csradmin20 Logout</a></div>
+            <div class="col-md-4"><a classhref="#"><%=data.username%></a></div>
          </div>
       </div>
       <!-- /.container -->
    </div>
    <div class=" row navbar menu" role="navigation">
-      <div class="col-md-1"><a href="#">Home</a></div>
-      <div class="col-md-2"><a href="#">Accounts</a></div>
-      <div class="col-md-2"><a href="#">Bills and Payments</a></div>
-      <div class="col-md-2"><a href="#">Customer Care</a></div>
-      <div class="col-md-2"><a href="#">Person Management</a></div>
-      <div class="col-md-2"><a href="#">Delivery Addresses</a></div>
-      <div class="col-md-1"></div>
+      <ul class = "nav navbar">
+      	<%_.each(data.Tab_Details , function(data){%>
+      	<li class = <%=data.Class%>><a href=<%=data.Tab_link%>><%=data.Tab_name%></a></li>
+      	<%});%>
+      <ul>
    </div>
    <!---/.navbar -->
    <div class = " row empty-div"></div>

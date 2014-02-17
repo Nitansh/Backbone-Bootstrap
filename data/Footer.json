@@ -1,1 +1,23 @@
-{ "key" : "© 2014 Newroz Inc. All Rights Reserved "}
+{ 
+	"tabs" : [
+		{
+			"name" : "Contact Shape",
+			"link" : ""
+		},
+		{
+			"name" : "Coverage",
+			"link" : ""
+			},
+		{
+			"name" : "Legal",
+			"link" : ""
+
+			},
+		{
+			"name" : "Privacy Policy",
+			"link" : ""
+
+		}	
+	],
+
+	"copyright" : "© 2014 Newroz Inc. All Rights Reserved "}
