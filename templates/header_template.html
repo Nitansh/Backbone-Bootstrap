@@ -38,9 +38,9 @@ background-color : rgb(245, 245, 245);
       <!-- /.container -->
    </div>
    <div class=" row navbar menu" role="navigation">
-      <ul class = "nav navbar">
+      <ul class = "nav navbar-nav">
       	<%_.each(data.Tab_Details , function(data){%>
-      	<li class = <%=data.Class%>><a href=<%=data.Tab_link%>><%=data.Tab_name%></a></li>
+      	<li><a href=<%=data.Tab_link%>><%=data.Tab_name%></a></li>
       	<%});%>
       <ul>
    </div>

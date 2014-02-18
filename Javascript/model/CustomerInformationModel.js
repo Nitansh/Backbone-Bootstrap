@@ -9,7 +9,7 @@ define([
 	
 		CustomerInformationModel = Backbone.Model.extend({
  		
- 		url : '/data/Footer.json'
+ 		url : '/data/Customer_information.json'
 
 		});
 

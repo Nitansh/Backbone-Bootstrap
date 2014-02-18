@@ -17,21 +17,21 @@
 <div class = "customerDetails container">
    <!--- First row-->
    <div class = "row">
-      <div class = "well">Personal Infomation</div>
+      <div class = "well"><%= data.personal_info.header%></div>
       <div class = "custom">
          <div class = "col-md-7 ">
             <h4>
-               <span>Tanny</span> 
-               <span>Customer Owner Person Account</span>
-               <span> 8272 </span>
+               <span><%= data.personal_info.Personal_Details.customer_name%></span>
+               <span><%= data.personal_info.Personal_Details.Account_no%></span>
             </h4>
          </div>
          <div class = "col-md-2">
             <h5>
                <div class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="dLabel">Select Other Role&nbsp;<b class="caret"></b></div>
                <ul class="dropdown-menu">
-                  <li>One </li>
-                  <li>Two</li>
+                  <%_.each( data.DropDown_1 , function(data){%>
+                  <li>data.Button_Name</li>
+                  <%});%>
                </ul>
             </h5>
          </div>
@@ -39,45 +39,46 @@
             <h5>
                <div class="dropdown-toggle" data-toggle="dropdown">Select Other Person&nbsp;<b class="caret"></b></div>
                <ul class="dropdown-menu">
-                  <li>One </li>
-                  <li>Two</li>
+                  <%_.each( data.DropDown_2 , function(data){%>
+                  <li>data.Button_Name</li>
+                  <%});%>
                </ul>
             </h5>
          </div>
          <div class = "col-md-1">
-            <h5> <a href="#/update">Update</a></h5>
+            <h5> <a href=<%=data.update_button.Link%>><%=data.update_button.Name%></a></h5>
          </div>
       </div>
    </div>
    <!--Second Row-->
    <div class = "row customerInfo">
       <div class = "col-md-8  well well-sm">
-         <h5>Address</h5>
+         <h5><%= data.personal_info.Personal_Details.Address%></h5>
       </div>
       <div class = "col-md-3 col-md-offset-1  well well-sm">
-         <h5>GSM</h5>
+         <h5><%= data.personal_info.Personal_Details.Connection%></h5>
       </div>
    </div>
    <div class ="row well">
-      <div class = "col-md-2">Account Details</div>
-      <div class = "col-md-1 col-md-offset-7"><button type="button" class="btn btn-default">Account</button></div>
-      <div class = "col-md-1"><button type="button" class="btn btn-default">Subscribe</button></div>
-      <div class = "col-md-1"><button type="button" class="btn btn-default">Navigate</button></div>
+      <div class = "col-md-2"><%= data.Account_info.header%></div>
+      <div class = "col-md-1 col-md-offset-7"><button type="button" class="btn btn-default"><%= data.Account_info.Button_list[0].Name%></button></div>
+      <div class = "col-md-1"><button type="button" class="btn btn-default"><%= data.Account_info.Button_list[1].Name%></button></div>
+      <div class = "col-md-1"><button type="button" class="btn btn-default"><%= data.Account_info.Button_list[2].Name%></button></div>
    </div>
    <div class = "row well well-sm">
       <div class = "col-md-4 ">
          <span>
-         <h5>customer Acc no - cust- name</h5>
+         <h5><%= data.personal_info.Personal_Details.customer_name%> - <%= data.personal_info.Personal_Details.Account_no%></h5>
          <span>
       </div>
       <div class = "col-md-2 col-md-offset-4 ">
          <span>
-            <h5>Activated on - 22/10/13</h5>
+            <h5><%= data.Account_info.Details.Activated.header%> - <%=data.Account_info.Details.Activated.date%></h5>
          </span>
       </div>
       <div class = "col-md-2 ">
          <span>
-            <h5>Status - New</h5>
+            <h5><%= data.Account_info.Details.status.header%> - <%=data.Account_info.Details.status.header%></h5>
          </span>
       </div>
    </div>
