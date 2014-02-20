@@ -22,9 +22,20 @@ define([
 				model    : new HeaderModel, 
 
 				events : {
-					'click .tabs' :  'setActiveClass'
+					'click .tabs' :  'setActiveClass',
+					'click li#RTL':'RTL_conversion',
+					'click li#LTR' : 'LTR_conversion'
 				},
 				
+			RTL_conversion:function() {
+					var bootstrap_link =$("link[rel=stylesheet]") 
+					$(bootstrap_link[0]).attr({href : "./css/bootstrap.rtl.css"});
+				},
+				LTR_conversion:function() {
+					var bootstrap_link =$("link[rel=stylesheet]")
+					$(bootstrap_link[0]).attr({href : "./css/bootstrap.min.css"});
+				},
+
 				initialize : function(){
 					_.bindAll(this,"remove","success","error","render");
 					var _this = this;
