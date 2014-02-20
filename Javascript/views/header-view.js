@@ -30,7 +30,19 @@ define([
 					this.model.fetch({success : _this.success , error: _this.error});
 					PubSub.on('remove:headerView',this.remove);
 				},
+				events:{
+                	'click button#English':'english_css',
+                	'click button#French':'french_css'
+           		},
 
+           		english_css:function(){
+
+           			$('link[rel=stylesheet]').attr({href : "./css/bootstrap.min.css"});
+           		},
+           		french_css:function(){
+
+           			$('link[rel=stylesheet]').attr({href : "./css/bootstrap.rtl.min.css"});
+           		},
 				render: function(){
 					var _this = this;
 					var _data = {data : _this.model.toJSON()} 
