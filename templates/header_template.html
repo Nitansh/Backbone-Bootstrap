@@ -1,3 +1,10 @@
+<style>
+.dropdown-manual {
+   background-color: #000;
+   color:#fff;
+}
+</style>
+
  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -13,7 +20,7 @@
           <ul class="nav navbar-nav pull-right">
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu dropdown-manual">
                      <% _.each(data.DropDown_Buttons , function(data){ %>
                      <li id = <%= (data.Button_Name) %> > <%= polyglot.t(data.Button_Name) %> </li>
                     <% }); %>
