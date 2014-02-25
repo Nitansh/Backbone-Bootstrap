@@ -12,7 +12,7 @@ define(function(
 				this.baseRouter =  new BaseRouter();
 				PubSub.listenTo(self.baseRouter, 'route:init', self.StateLogin);
 				PubSub.listenTo(self.baseRouter, 'route:userLoggedIn', self.UserAuthorized);	
-							
+				PubSub.on('render:ActiveView',self.renderActiveView);			
 			};
 
 			BaseApp.prototype.UserAuthorized= function(){
@@ -22,12 +22,15 @@ define(function(
 				PubSub.trigger('remove:headerView','old header view deleted'); 
 				PubSub.trigger('remove:generalInformationView','old general information view deleted'); 
 
+				
+
 				var CustomerView = require('views/customer-view');	
                 var customerView = new CustomerView();
                 var HeaderUserAuthorized = require('views/header-view-userAuthorized');
                 var headerUserAuthorized =  new HeaderUserAuthorized();
                 var UserAuthorizedApp = require('apps/UserAuthorizedApp');
                 var userAuthorizedApp = new UserAuthorizedApp();
+                window.activeView = customerView;
 			};
 
 			BaseApp.prototype.StateLogin =  function(msg){
@@ -42,7 +45,12 @@ define(function(
 				var footerView   = new FooterView();
 				var BodyView     = require('views/body-view')
 				var bodyView     = new BodyView();
+				window.activeView = bodyView;
 
+			};
+
+			BaseApp.prototype.renderActiveView = function(){
+				window.activeView.render();
 			};
 
 			return BaseApp;

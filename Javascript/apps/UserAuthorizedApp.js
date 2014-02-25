@@ -17,9 +17,9 @@ define(function(
 			var PubSub     = require('libs/pubSub');
 			PubSub.trigger('remove:bodyView','old body view deleted');  
 			PubSub.trigger('remove:customerView','old customer information view deleted'); 
-
 			var GeneralInformationView = require('views/generalInformation-view');	
             var generalInformationView = new GeneralInformationView();
+            window.activeView = generalInformationView;
 		}
 
 		userAuthorizedApp.prototype.stateDashBoard =  function(){
@@ -30,6 +30,7 @@ define(function(
 
 			var DashboardView = require('views/dashboard-view');	
             var dashboardView = new DashboardView();
+            window.activeView = dashboardView;
 		}
 
 		return userAuthorizedApp;
